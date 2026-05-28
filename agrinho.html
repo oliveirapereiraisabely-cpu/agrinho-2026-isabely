@@ -1,87 +1,163 @@
-export default function AgrinhoSite() {
-  const curiosidades = [
-    "Arapoti é conhecida pela força da agropecuária no Paraná.",
-    "A produção de suínos ajuda na economia local e gera empregos.",
-    "Os cuidados com higiene e alimentação são essenciais para os animais.",
-    "A tecnologia no campo melhora a produtividade e o bem-estar dos suínos.",
-  ];
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrinho - Suinocultura em Arapoti</title>
 
-  return (
-    <div className="min-h-screen bg-green-50 text-gray-800">
-      <header className="bg-green-700 text-white p-8 shadow-lg">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-4xl font-bold mb-2">
-            Agrinho: Suinocultura em Arapoti
-          </h1>
-          <p className="text-lg">
-            Um site educativo e interativo sobre a produção de suínos e a importância da agropecuária.
-          </p>
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#f4fff4;
+      color:#333;
+    }
+
+    header{
+      background:#228B22;
+      color:white;
+      text-align:center;
+      padding:40px;
+    }
+
+    header h1{
+      font-size:40px;
+    }
+
+    .container{
+      width:90%;
+      max-width:1000px;
+      margin:auto;
+      padding:20px;
+    }
+
+    section{
+      background:white;
+      padding:25px;
+      margin-top:20px;
+      border-radius:15px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h2{
+      color:#228B22;
+    }
+
+    .cards{
+      display:flex;
+      flex-wrap:wrap;
+      gap:20px;
+      margin-top:20px;
+    }
+
+    .card{
+      flex:1;
+      min-width:220px;
+      background:#dff5df;
+      padding:20px;
+      border-radius:10px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:scale(1.05);
+    }
+
+    footer{
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:30px;
+    }
+
+    button{
+      background:#228B22;
+      color:white;
+      border:none;
+      padding:12px 20px;
+      border-radius:10px;
+      cursor:pointer;
+      font-size:16px;
+      margin-top:15px;
+    }
+
+    button:hover{
+      background:#196619;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌱 Agrinho: Suinocultura em Arapoti</h1>
+    <p>Projeto sobre agropecuária e produção de suínos</p>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2>🐖 O que é Suinocultura?</h2>
+
+      <p>
+        A suinocultura é a criação de suínos para produção de alimentos.
+        Em Arapoti, no Paraná, essa atividade é muito importante para
+        a economia e para o desenvolvimento da agropecuária.
+      </p>
+    </section>
+
+    <section>
+      <h2>🌾 Importância da Agropecuária</h2>
+
+      <ul>
+        <li>Gera empregos</li>
+        <li>Fortalece a economia</li>
+        <li>Produz alimentos</li>
+        <li>Usa tecnologia no campo</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💚 Cuidados com os Suínos</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>🥗 Alimentação</h3>
+          <p>Os animais precisam de alimentação saudável.</p>
         </div>
-      </header>
 
-      <main className="max-w-5xl mx-auto p-6 space-y-10">
-        <section className="bg-white rounded-3xl shadow-md p-6">
-          <h2 className="text-2xl font-semibold mb-4">Sobre a Suinocultura</h2>
-          <p className="text-lg leading-relaxed">
-            A suinocultura é a criação de suínos para produção de alimentos. Em Arapoti, no Paraná,
-            essa atividade é muito importante para a economia e para o desenvolvimento rural.
-            Os produtores utilizam técnicas modernas para garantir qualidade, sustentabilidade
-            e bem-estar animal.
-          </p>
-        </section>
+        <div class="card">
+          <h3>🩺 Saúde</h3>
+          <p>O acompanhamento veterinário é essencial.</p>
+        </div>
 
-        <section className="grid md:grid-cols-2 gap-6">
-          <div className="bg-white rounded-3xl shadow-md p-6">
-            <h2 className="text-2xl font-semibold mb-4">Importância para Arapoti</h2>
-            <ul className="list-disc pl-6 space-y-2 text-lg">
-              <li>Geração de empregos no campo e na cidade.</li>
-              <li>Fortalecimento da economia local.</li>
-              <li>Produção de alimentos de qualidade.</li>
-              <li>Uso de tecnologia na agropecuária.</li>
-            </ul>
-          </div>
+        <div class="card">
+          <h3>🚿 Higiene</h3>
+          <p>Os ambientes devem estar limpos e organizados.</p>
+        </div>
 
-          <div className="bg-white rounded-3xl shadow-md p-6">
-            <h2 className="text-2xl font-semibold mb-4">Cuidados com os Suínos</h2>
-            <ul className="list-disc pl-6 space-y-2 text-lg">
-              <li>Alimentação balanceada.</li>
-              <li>Ambiente limpo e confortável.</li>
-              <li>Acompanhamento veterinário.</li>
-              <li>Uso consciente dos recursos naturais.</li>
-            </ul>
-          </div>
-        </section>
+      </div>
 
-        <section className="bg-white rounded-3xl shadow-md p-6">
-          <h2 className="text-2xl font-semibold mb-6">Curiosidades</h2>
+      <button onclick="mostrarMensagem()">
+        Clique Aqui
+      </button>
 
-          <div className="grid sm:grid-cols-2 gap-4">
-            {curiosidades.map((item, index) => (
-              <div
-                key={index}
-                className="bg-green-100 rounded-2xl p-4 text-lg shadow-sm hover:scale-105 transition-transform"
-              >
-                {item}
-              </div>
-            ))}
-          </div>
-        </section>
+      <p id="mensagem"></p>
+    </section>
 
-        <section className="bg-green-700 text-white rounded-3xl shadow-lg p-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Mensagem Final</h2>
-          <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-            A agropecuária faz parte da história e do futuro de Arapoti. A produção de suínos mostra
-            como o campo pode unir tecnologia, sustentabilidade e desenvolvimento econômico.
-            Valorizar o trabalho rural é importante para toda a sociedade.
-          </p>
-        </section>
-      </main>
+  </div>
 
-      <footer className="bg-gray-900 text-white text-center p-4 mt-10">
-        <p>
-          Projeto escolar • 1º ano do Ensino Médio • Tema Agrinho
-        </p>
-      </footer>
-    </div>
-  );
-}
+  <footer>
+    <p>Projeto Escolar - 1º Ano do Ensino Médio</p>
+  </footer>
+
+  <script>
+    function mostrarMensagem(){
+      document.getElementById("mensagem").innerHTML =
+      "🌱 A agropecuária é muito importante para Arapoti!";
+    }
+  </script>
+
+</body>
+</html>
